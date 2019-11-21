@@ -10,6 +10,7 @@ didn't resolve and reports them.
 ## How to use it?
 This is a Github action, so it has to be added to a github workflow.  
 A simple example of running this action on all pushes to the repository would be
+add a `main.yml` file under `.github/workflows` with the following content
 ```yaml
 on: [push]
 
@@ -24,3 +25,5 @@ jobs:
       - name: Merge Conflict finder
         uses: olivernybroe/action-conflict-finder@v1.0
 ```
+
+On each push, it will now run the merge conflict finder
