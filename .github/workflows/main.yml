@@ -7,6 +7,6 @@ jobs:
     steps:
       - name: Conflict finder
         id: conflict
-        uses: olivernybroe/action-conflict-finder
+        uses: olivernybroe/action-conflict-finder@master
       - name: Get merge conflicts
         run: echo "${{ steps.conflict.outputs.conflicts }}"
