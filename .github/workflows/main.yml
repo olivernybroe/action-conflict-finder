@@ -5,8 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Find merge conflicts
     steps:
-      - name: Conflict finder
+      - uses: actions/checkout@v1
+      - name: Find Merge Conflict finder
         id: conflict
         uses: olivernybroe/action-conflict-finder@master
-      - name: Get merge conflicts
-        run: echo "${{ steps.conflict.outputs.conflicts }}"

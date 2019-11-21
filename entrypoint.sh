@@ -1,8 +1,8 @@
 #!/bin/sh -l
-echo "::set-output name=conflicts::"
+set -eu
 
 if
-    grep -lr -r --exclude-dir={node_modules,vendor,.git} --exclude=conflictFinder '<<<<<<<' /app;
+    grep -lr -r --exclude-dir={node_modules,vendor,.git} --exclude=conflictFinder '<<<<<<<' .;
 then
     printf "\033[1;31mFound merge conflicts.\033[0m\n"
     exit 1;
