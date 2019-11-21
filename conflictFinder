@@ -1,10 +1,8 @@
-#!/bin/bash
+#!/bin/sh -l
+set -eu
+
 if
-find . -name '.git' -type d -prune \
-     -o -name "node_modules" -prune \
-     -o -name "vendor" -prune \
-     -o -name "conflictFinder" -prune \
-     -o -type f -exec grep --color -n -H {} '<<<<<<<' .;
+    grep -lr -R --exclude-dir={node_modules,vendor,.git} --exclude=conflictFinder '<<<<<<<' .;
 then
     printf "\033[1;31mFound merge conflicts.\033[0m\n"
     exit 1;
