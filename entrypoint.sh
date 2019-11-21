@@ -1,5 +1,3 @@
 #!/bin/sh -l
 
-echo "Hello $1"
-time=$(date)
-echo ::set-output name=time::$time
+printf "::set-output name=conflicts::\033[1;31mFound merge conflicts.\033[0m\n"

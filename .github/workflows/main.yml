@@ -1,0 +1,17 @@
+on: [push]
+
+jobs:
+  conflict-finder:
+    runs-on: ubuntu-latest
+    name: A job to find conflicts
+    steps:
+      # To use this repository's private action, you must check out the repository
+      - name: Checkout
+        uses: olivernybroe/action-conflict-finder
+      - uses: ./ # Uses an action in the root directory
+      - name: Conflict finder
+        id: conflict
+        uses: olivernybroe/action-conflict-finder
+      # Use the output from the `hello` step
+      - name: Get merge conflicts
+        run: echo "${{ steps.conflict.outputs.conflicts }}"

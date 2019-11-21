@@ -2,6 +2,6 @@ FROM alpine:3.10
 
 LABEL version="latest"
 
-COPY conflictFinder /conflictFinder.sh
+COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["/conflictFinder.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
