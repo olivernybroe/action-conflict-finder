@@ -1,8 +1,5 @@
-FROM alpine:3.10
-
-LABEL version="latest"
+FROM ubuntu:latest
 
 COPY entrypoint.sh /entrypoint.sh
-COPY conflictFinder /conflictFinder
 
 ENTRYPOINT ["/entrypoint.sh"]

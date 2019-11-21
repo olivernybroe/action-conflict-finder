@@ -2,7 +2,7 @@
 echo "::set-output name=conflicts::"
 
 if
-    grep -lr -r --exclude-dir={node_modules,vendor,.git} --exclude=conflictFinder '<<<<<<<' .;
+    grep -lr -r --exclude-dir={node_modules,vendor,.git} --exclude=conflictFinder '<<<<<<<' /app;
 then
     printf "\033[1;31mFound merge conflicts.\033[0m\n"
     exit 1;
