@@ -3,7 +3,7 @@ on: [push]
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Find merge conflicts
     steps:
       - name: Conflict finder
         id: conflict
