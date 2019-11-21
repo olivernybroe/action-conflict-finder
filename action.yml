@@ -1,0 +1,11 @@
+name: 'Merge Conflict Finder'
+description: 'Check if there are any unresolved merge conflicts'
+branding:
+  icon: 'git-merge'
+  color: 'gray-dark'
+outputs:
+  conflicts: # id of output
+    description: 'Output if a conflict is found.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
