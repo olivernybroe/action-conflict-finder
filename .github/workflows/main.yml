@@ -10,7 +10,7 @@ jobs:
         uses: olivernybroe/action-conflict-finder@master
 
       - name: Badge Generator
-        uses: olivernybroe/badge-generator-action@v0.1
+        uses: olivernybroe/badge-generator-action@master
       - uses: actions/upload-artifact@v1
         with:
           name: test.svg
