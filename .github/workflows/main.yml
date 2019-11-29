@@ -8,11 +8,3 @@ jobs:
       - uses: actions/checkout@v1
       - name: Merge Conflict finder
         uses: olivernybroe/action-conflict-finder@master
-
-      - name: Badge Generator
-        uses: olivernybroe/badge-generator-action@master
-      - uses: actions/upload-artifact@v1
-        with:
-          name: test.svg
-          path: ./
-
