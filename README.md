@@ -20,7 +20,7 @@ jobs:
     name: Find merge conflicts
     steps:
       # Checkout the source code so we have some files to look at.
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       # Run the actual merge conflict finder
       - name: Merge Conflict finder
         uses: olivernybroe/action-conflict-finder@v1.0
