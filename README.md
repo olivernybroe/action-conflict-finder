@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v2
       # Run the actual merge conflict finder
       - name: Merge Conflict finder
-        uses: olivernybroe/action-conflict-finder@v1.1
+        uses: olivernybroe/action-conflict-finder@v1.2
 ```
 
 On each push, it will now run the merge conflict finder
