@@ -27,3 +27,5 @@ jobs:
 ```
 
 On each push, it will now run the merge conflict finder
+
+<<<<<<<
