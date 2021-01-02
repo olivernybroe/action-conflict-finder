@@ -52,7 +52,7 @@ jobs:
       # Run the actual merge conflict finder
       - name: Merge Conflict finder
         uses: olivernybroe/action-conflict-finder@v1.2
-		with:
-		  exclude_dir: "path/to/ignore,path/to/ignore2"
-		  excludes: "ignore.me,*.zip"
+        with:
+          exclude_dir: "path/to/ignore,path/to/ignore2"
+          excludes: "ignore.me,*.zip"
 ```
