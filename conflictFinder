@@ -1,9 +1,8 @@
 #!/bin/bash -l
 set -eu
-set -x
 
 grepExit () {
-	# Grep Returns 1 if not found, > 1 is an error
+	# Grep Returns 1 if pattern not found, > 1 is an error
 	if [ $1 -eq 1 ]; then
 		printf "\033[0;32mNo merge conflicts found.\033[0m\n"
 		exit 0;
@@ -12,7 +11,7 @@ grepExit () {
 	exit 1;
 }
 
-EXCLUDE=(${INPUT_EXCLUDES})
+EXCLUDE=(${INPUT_EXCLUDES/,/ })
 
 CONFLICTS="$(grep -lr -R --exclude-dir={.git,"${INPUT_EXCLUDE_DIR}"} "${EXCLUDE[@]/#/--exclude=}" -E -- '^<<<<<<<|^>>>>>>>' .)" || grepExit $?
 
