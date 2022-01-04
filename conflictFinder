@@ -14,7 +14,7 @@ grepExit () {
 EXCLUDE=(${INPUT_EXCLUDES/,/ })
 EXCLUDE_DIR=(${INPUT_EXCLUDE_DIR/,/ })
 
-CONFLICTS="$(grep -lr -R --exclude-dir=.git "${EXCLUDE_DIR[@]/#/--exclude-dir=}" "${EXCLUDE[@]/#/--exclude=}" -E -- '^<<<<<<<|^>>>>>>>' .)" || grepExit $?
+CONFLICTS="$(grep -lr -r --exclude-dir=.git "${EXCLUDE_DIR[@]/#/--exclude-dir=}" "${EXCLUDE[@]/#/--exclude=}" -E -- '^<<<<<<<|^>>>>>>>' .)" || grepExit $?
 
 printf "\033[1;31mFound merge conflicts.\033[0m\n"
 for file in "$CONFLICTS"
