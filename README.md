@@ -8,9 +8,9 @@ didn't resolve and reports them.
 
 
 ## How to use it?
-This is a Github action, so it has to be added to a github workflow.  
+This is a GitHub action, so it has to be added to a GitHub workflow.  
 A simple example of running this action on all pushes to the repository would be
-add a `main.yml` file under `.github/workflows` with the following content
+to add a `main.yml` file under `.github/workflows` with the following content
 ```yaml
 on: [push]
 
@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Find merge conflicts
     steps:
-      # Checkout the source code so we have some files to look at.
+      # Checkout the source code so there are some files to look at.
       - uses: actions/checkout@v2
       # Run the actual merge conflict finder
       - name: Merge Conflict finder
