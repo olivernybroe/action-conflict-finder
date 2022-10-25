@@ -7,4 +7,4 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Merge Conflict finder
-        uses: olivernybroe/action-conflict-finder@master
+        uses: .
