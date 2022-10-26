@@ -13,5 +13,10 @@ inputs:
     required: false
     default: ''
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: 'composite'
+  steps:
+    - run: $GITHUB_ACTION_PATH/conflictFinder
+      shell: bash
+      env:
+        INPUT_EXCLUDE_DIR: ${{ inputs.exclude_dir }}
+        INPUT_EXCLUDES: ${{ inputs.excludes }}
