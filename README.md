@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v2
       # Run the actual merge conflict finder
       - name: Merge Conflict finder
-        uses: olivernybroe/action-conflict-finder@v3.0
+        uses: olivernybroe/action-conflict-finder@v4.0
 ```
 
 On each push, it will now run the merge conflict finder
@@ -51,7 +51,7 @@ jobs:
       - uses: actions/checkout@v2
       # Run the actual merge conflict finder
       - name: Merge Conflict finder
-        uses: olivernybroe/action-conflict-finder@v3.0
+        uses: olivernybroe/action-conflict-finder@v4.0
         with:
           exclude_dir: "path/to/ignore,path/to/ignore2"
           excludes: "ignore.me,*.zip"
